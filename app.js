@@ -27,8 +27,10 @@ app.use(express.static(publicPath))
 
 // Routes
 const indexRouter = require( './routes/index' )
+const request = require( './routes/request' )
 
 app.use( '/', indexRouter )
+app.use( '/', request )
 
 // catch 404 and forward to error handler
 app.use( (req, res, next) => {
